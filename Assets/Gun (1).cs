@@ -31,7 +31,7 @@ public class Gun : MonoBehaviour
          _timer = 0;
        } 
     }
-    void shoot()
+    public void shoot()
     {
         Debug.Log("shoot!");
         GameObject Bullet = Instantiate(bulletPrefab, bulletInstantiationLocaation.transform.position, bulletInstantiationLocaation.transform.rotation);
