@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class bullet2 : MonoBehaviour
+
+public class PlayerBullet : MonoBehaviour
 {
-    //public float life = 10;
+    // Start is called before the first frame update
+ 
+    public float life = 10;
 
     void Awake()
     {
-        //Destroy(gameObject, life);
+        Destroy(gameObject, life);
     }
 
     void OnCollisionEnter(Collision collision)

@@ -5758,7 +5758,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!1001 &1964602097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6321,7 +6321,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
@@ -6358,7 +6358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39fa014577c5bd343b76a05afc6d64bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5000
+  speed: 40
   Bullet2: {fileID: 7672901960379790277, guid: 3572f98130029c940bfb1260a1238f54, type: 3}
   barrel: {fileID: 289103469}
 --- !u!1 &2124398258
@@ -6485,6 +6485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289576959007472073, guid: 96c4db279a90541c396aa0f04c68fd54,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5571835655229846903, guid: 96c4db279a90541c396aa0f04c68fd54,
         type: 3}
