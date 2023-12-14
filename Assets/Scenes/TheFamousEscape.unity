@@ -2411,17 +2411,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4357d11735d55d8459e0333909a0215b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2428488
+      value: 0.12779675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4357d11735d55d8459e0333909a0215b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2428488
+      value: 0.12779675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4357d11735d55d8459e0333909a0215b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2428488
+      value: 0.12779675
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4357d11735d55d8459e0333909a0215b,
         type: 3}
@@ -3968,7 +3968,7 @@ GameObject:
   - component: {fileID: 678342432}
   - component: {fileID: 678342431}
   m_Layer: 0
-  m_Name: erwr
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
