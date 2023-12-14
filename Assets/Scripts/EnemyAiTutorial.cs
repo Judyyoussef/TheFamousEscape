@@ -10,7 +10,10 @@ public class EnemyAiTutorial : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public Animator enemyAnimator;
+
     public float health;
+
 
     //Patroling
     public Vector3 walkPoint;
@@ -30,8 +33,10 @@ public class EnemyAiTutorial : MonoBehaviour
 
     private void Awake()
     {
+        enemyAnimator.SetTrigger("PistolIdle");
         player = GameObject.Find("PlayerCapsule").transform;
         agent = GetComponent<NavMeshAgent>();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -43,6 +48,11 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        //if (playerInSightRange)
+        //{
+            // Trigger the "PistolIdle" animation state
+            
+        //}
     }
 
     private void Patroling()
