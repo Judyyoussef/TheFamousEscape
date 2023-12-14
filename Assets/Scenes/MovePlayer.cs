@@ -14,10 +14,10 @@ public class PlayerMovement : MonoBehaviour
         SetNewDestination(playerDestination.position);
     }
 
-    void Update()
-    {
-        // You can add any additional logic here if needed
-    }
+    //void Update()
+    //{
+    //    // You can add any additional logic here if needed
+    //}
 
     public void SetNewDestination(Vector3 newPosition)
     {

@@ -9,6 +9,7 @@ TagManager:
   - Objects
   - Chest
   - PlayerDestination
+  - RelicsColider
   layers:
   - Default
   - TransparentFX
