@@ -9,14 +9,16 @@ public class EnemyDead : MonoBehaviour
         // Add the following line to get the Animator component
         enemyAnimator = GetComponent<Animator>();
     }
-    void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        // Check if the collider belongs to the XR Rig
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             enemyAnimator.SetTrigger("Die");
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
+            Destroy(gameObject, 10f);
+
         }
     }
 }

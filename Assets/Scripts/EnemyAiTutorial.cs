@@ -8,6 +8,7 @@ public class EnemyAiTutorial : MonoBehaviour
 
     public Transform player;
 
+
     public LayerMask whatIsGround, whatIsPlayer;
 
     public Animator enemyAnimator;
@@ -29,11 +30,12 @@ public class EnemyAiTutorial : MonoBehaviour
 
     //States
     public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    private bool playerInSightRange, playerInAttackRange;
+    public float bulletSpeed;
 
     private void Awake()
     {
-        enemyAnimator.SetTrigger("PistolIdle");
+
         player = GameObject.Find("PlayerCapsule").transform;
         agent = GetComponent<NavMeshAgent>();
         enemyAnimator = GetComponent<Animator>();
@@ -87,17 +89,16 @@ public class EnemyAiTutorial : MonoBehaviour
 
     private void AttackPlayer()
     {
+
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-
         transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, bulletInstantiationLocaation.transform.position, bulletInstantiationLocaation.transform.rotation).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(bulletInstantiationLocaation.transform.forward * bulletSpeed, ForceMode.Impulse);
             ///End of attack code
 
             alreadyAttacked = true;

@@ -1,0 +1,26 @@
+newmtl Solid
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+
+newmtl Rz_A_125_Epolety_03_rescuplted_PSCN
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Rz_A_125_Epolety_03_rescuplted_PSCN.jpg
+
+newmtl Rz_A_125_Epolety_03_rescuplted_PSCN1
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+d 1.0
+Ns 0.0
+illum 0
+map_Kd Rz_A_125_Epolety_03_rescuplted_PSCN1.jpg
+

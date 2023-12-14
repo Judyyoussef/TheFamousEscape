@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BeginningScene.unity
+    guid: e9482eec024f810459ffdb6a1b57a60c
+  - enabled: 1
     path: Assets/Scenes/TheFamousEscape.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
