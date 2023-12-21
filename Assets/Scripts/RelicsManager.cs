@@ -5,48 +5,32 @@ using UnityEngine.SceneManagement;
 public class RelicsManager : MonoBehaviour
 {
     public DoorAnimationController doorAnimationController;
-    bool isFirstRelicIn = false;
-    bool isSecondRelicIn = false;
-    bool isThirdRelicIn = false;
-    bool isForthRelicIn = false;
 
-    public void SetFirstRelic(Collider other)
+    int objectCounter = 0;
+
+    public void SetFirstRelic()
     {
-        isFirstRelicIn = true;
-        TryOpenDoor(other);
+        objectCounter++;
+
+        TryOpenDoor();
+        Debug.Log("first in");
+
     }
 
-    public void SetSecondRelic(Collider other)
-    {
-        isSecondRelicIn = true;
-        TryOpenDoor(other);
-    }
 
-    public void SetThirdRelic(Collider other)
+    private void TryOpenDoor()
     {
-        isThirdRelicIn = true;
-        TryOpenDoor(other);
-    }
-
-    public void SetForthRelic(Collider other)
-    {
-        isForthRelicIn = true;
-        TryOpenDoor(other);
-    }
-
-    private void TryOpenDoor(Collider other)
-    {
-        if (isFirstRelicIn && isSecondRelicIn && isThirdRelicIn && isForthRelicIn)
+        if (objectCounter>=4)
         {
             doorAnimationController.OpenDoor();
 
             // Check if the colliding object has the specified tag
-            if (other.CompareTag("PlayerDestination"))
-            {
-                Debug.Log("PlayerDestination found!");
-                // Transition to the next scene
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
+
+
+            Debug.Log("PlayerDestination found!");
+            // Transition to the next scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
